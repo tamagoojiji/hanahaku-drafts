@@ -37,11 +37,12 @@
     width: 34px; height: 34px; border-radius: 10px; font-size: 16px; cursor: pointer;
   }
   .icon-btn:active { background: rgba(255,255,255,.3); }
-  nav { display: flex; gap: 4px; }
+  nav { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
   nav button {
-    flex: 1; background: transparent; border: none; color: rgba(255,255,255,.75);
-    padding: 10px 4px 12px; font-size: 14px; font-weight: 600; cursor: pointer;
-    border-bottom: 3px solid transparent;
+    flex: none; background: transparent; border: none; color: rgba(255,255,255,.75);
+    padding: 10px 12px 12px; font-size: 14px; font-weight: 600; cursor: pointer;
+    border-bottom: 3px solid transparent; white-space: nowrap;
   }
   nav button.active { color: #fff; border-bottom-color: #ffd23f; }
   main { padding: 14px 14px 40px; max-width: 640px; margin: 0 auto; }
@@ -115,11 +116,13 @@
 <div class="toast" id="toast"></div>
 
 <script>
-// タブ設定（将来USJ分はここに追加するだけ。keyはスプシのタブ名と一致させる）
+// タブ設定（keyはスプシのタブ名と一致させる）
 const TABS = [
-  { key: 'X', label: 'X' },
-  { key: 'ストーリーズ', label: 'ストーリーズ' },
-  { key: 'オープンチャット', label: 'オプチャ' },
+  { key: 'X', label: '花博X' },
+  { key: 'ストーリーズ', label: '花博ストーリーズ' },
+  { key: 'オープンチャット', label: '花博オプチャ' },
+  { key: 'USJ-オプチャ', label: 'USJオプチャ' },
+  { key: 'USJ-ストーリーズ', label: 'USJストーリーズ' },
 ];
 const CONFIG_KEY = 'hanahaku-drafts-config';
 
