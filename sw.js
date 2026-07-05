@@ -1,5 +1,5 @@
 // 花博 下書きBOX Service Worker: 静的アセットのみキャッシュ（GAS APIはキャッシュしない）
-const CACHE = 'hanahaku-drafts-v3';
+const CACHE = 'hanahaku-drafts-v4';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
